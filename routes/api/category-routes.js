@@ -25,7 +25,7 @@ router.get("/:id", async (req, res) => {
     });
 
     if (!category) {
-      res.status(404).send({ message: "Not found" });
+      res.status(404).send({ message: "Category not found" });
       return;
     }
 
@@ -49,8 +49,24 @@ router.put("/:id", (req, res) => {
   // update a category by its `id` value
 });
 
-router.delete("/:id", (req, res) => {
+router.delete("/:id", async (req, res) => {
   // delete a category by its `id` value
+  try {
+    const category = await Category.destroy({
+      where: {
+        id: req.params.id,
+      },
+    });
+
+    if (!category) {
+      res.status(404).send({ message: "Category not found" });
+      return;
+    }
+
+    res.status(200).json(category);
+  } catch (error) {
+    res.status(400).json(error);
+  }
 });
 
 module.exports = router;
