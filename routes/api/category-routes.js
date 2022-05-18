@@ -24,8 +24,8 @@ router.get("/:id", async (req, res) => {
       include: [{ model: Product }],
     });
 
-    if(!category) {
-      res.status(404).send({message: "Not found"});
+    if (!category) {
+      res.status(404).send({ message: "Not found" });
       return;
     }
 
@@ -35,10 +35,14 @@ router.get("/:id", async (req, res) => {
   }
 });
 
-router.post("/", (req, res) => {
+router.post("/", async (req, res) => {
   // create a new category
-
-
+  try {
+    const category = await Category.create(req.body);
+    res.status(200).json(category);
+  } catch (error) {
+    res.status(400).json(error);
+  }
 });
 
 router.put("/:id", (req, res) => {
