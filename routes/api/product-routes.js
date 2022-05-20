@@ -82,16 +82,17 @@ router.post("/", (req, res) => {
 });
 
 // update product
+// PROBLEM - not handling when ID does not exist
 router.put("/:id", (req, res) => {
   // update product data
 
-//   example of put updating price and updating to no tags
+// example of put updating price and updating to no tags
+// always include tagIds when updating product
 // {
 // 	"price": 111,
 // 	"tagIds": []
 // }
 
-  console.log('req.body', req.body)
   Product.update(req.body, {
     where: {
       id: req.params.id,
@@ -101,6 +102,7 @@ router.put("/:id", (req, res) => {
       // find all associated tags from ProductTag
       return ProductTag.findAll({ where: { product_id: req.params.id } });
     })
+
     .then((productTags) => {
       // get list of current tag_ids
       const productTagIds = productTags.map(({ tag_id }) => tag_id);

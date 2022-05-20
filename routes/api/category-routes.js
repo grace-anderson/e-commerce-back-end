@@ -53,15 +53,16 @@ router.put("/:id", async (req, res) => {
         id: req.params.id,
       },
     });
+    console.log('category length', category.length);
 
-    if (!category) {
+    if (category.length === 1 && category[0] === 0) {
       res.status(404).send({ message: "Category not found" });
       return;
     }
 
     res.status(200).json(category);
   } catch (err) {
-    res.status(500).json(err);
+    res.status(400).json(err);
   }
 });
 
