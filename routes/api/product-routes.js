@@ -19,7 +19,7 @@ router.get("/", async (req, res) => {
     });
     res.status(200).json(products);
   } catch (error) {
-    res.status(500).json(error);
+    res.status(400).json(error);
   }
 });
 
@@ -45,7 +45,7 @@ router.get("/:id", async (req, res) => {
 
     res.status(200).json(product);
   } catch (error) {
-    res.status(500).json(error);
+    res.status(400).json(error);
   }
 });
 
@@ -86,23 +86,28 @@ router.post("/", (req, res) => {
 router.put("/:id", (req, res) => {
   // update product data
 
-// example of put updating price and updating to no tags
-// always include tagIds when updating product
-// {
-// 	"price": 111,
-// 	"tagIds": []
-// }
+  // example of put updating price and updating to no tags
+  // always include tagIds when updating product
+  // {
+  // 	"price": 111,
+  // 	"tagIds": []
+  // }
 
   Product.update(req.body, {
     where: {
       id: req.params.id,
     },
   })
+
+    // if (!category) {
+    //   res.status(404).send({ message: "Category not found" });
+    //   return;
+    // }
+
     .then((product) => {
       // find all associated tags from ProductTag
       return ProductTag.findAll({ where: { product_id: req.params.id } });
     })
-
     .then((productTags) => {
       // get list of current tag_ids
       const productTagIds = productTags.map(({ tag_id }) => tag_id);

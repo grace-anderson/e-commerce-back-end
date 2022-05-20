@@ -12,7 +12,7 @@ router.get("/", async (req, res) => {
     });
     res.status(200).json(categories);
   } catch (error) {
-    res.status(500).json(error);
+    res.status(400).json(error);
   }
 });
 
@@ -31,7 +31,7 @@ router.get("/:id", async (req, res) => {
 
     res.status(200).json(category);
   } catch (error) {
-    res.status(500).json(error);
+    res.status(400).json(error);
   }
 });
 
