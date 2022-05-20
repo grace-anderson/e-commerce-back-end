@@ -19,7 +19,7 @@ Category.hasMany(Product, {
 Product.belongsToMany(Tag, {
   through: {
     model: ProductTag,
-    // unique: false
+    unique: false
   }, 
   foreignKey: 'product_id',
   onDelete: 'CASCADE',
@@ -29,9 +29,9 @@ Product.belongsToMany(Tag, {
 Tag.belongsToMany(Product, {
   through: {
     model: ProductTag,
-    // unique: false
+    unique: false
   },
-  foreignKey: 'product_id',
+  foreignKey: 'tag_id',
   onDelete: 'CASCADE',
 });
 
