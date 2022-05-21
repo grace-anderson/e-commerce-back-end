@@ -35,7 +35,7 @@ Go to [GitHub](https://github.com/grace-anderson/e-commerce-back-end) for the e-
 ## Installation and Usage
   1. Get the code
       * You need a [GitHub](https://github.com/) account to access the code
-      * Install the Employee Tracker by forking the [Employee Tracker GitHub repository](https://github.com/grace-anderson/employee-tracker) and then cloning the fork locally
+      * Install the E-commerce Back End by forking the [E-commerce Back End GitHub repository](https://github.com/grace-anderson/e-commerce-back-end) and then cloning the fork locally
       * More information
         * [How to fork a repo](https://docs.github.com/en/get-started/quickstart/fork-a-repo)
         * [GitHub getting started](https://docs.github.com/)
@@ -58,7 +58,7 @@ License covering this application: [ISC](https://opensource.org/licenses/ISC)
 * Also see the [GitHub Community Guidelines](https://docs.github.com/en/site-policy/github-terms/github-community-guidelines)
 
 ## Test Instructions
-Test using the following User Story and Acceptance Criteria to validate the features of the Employee Tracker.
+Test using the following User Story and Acceptance Criteria to validate the functionality of the E-Commerce Back End.
 
 #### User Story
 AS A manager at an internet retail company
