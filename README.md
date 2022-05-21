@@ -1,7 +1,7 @@
-# Project: Employee Tracker
+# Project: E-Commerce Back End
 
 
-[![](https://img.shields.io/badge/License-MIT-brightgreen)](https://opensource.org/licenses/MIT)
+[![](https://img.shields.io/badge/License-MIT-brightgreen)](https://opensource.org/licenses/ISC)
 
 
 ## Table of Contents
@@ -15,19 +15,22 @@
 
 
 ## Project Description 
-The Employee Tracker is a content management system (CMS) that enables non-developers to easily view and interract with information stored in the employees_db database. User scenarios could include a small business or start up which needs manage their employees information. 
+This project is an e-commerce back end built by configuring a working Express.js API to use Sequelize to interact with a MySQL database. 
 
-Employee Tracker enables users to interract with the database to view, update or delete records via the command line.
+Internet retail, also known as e-commerce, is the largest sector of the electronics industry, generating an estimated $29 trillion in 2019. E-commerce platforms like Shopify and WooCommerce provide a suite of services to businesses of all sizes. Due to their prevalence, understanding the fundamental architecture of these platforms will benefit you as a small business owner, a start up team member, or a junior developer.
 
-Go to [GitHub](https://github.com/grace-anderson/employee-tracker) for the Employee Tracker code.
+Because this application is not deployed, **TO DO Link ** a walkthrough video is provided to demonstrate the e-commerce back end's use and functionality. 
+
+Go to [GitHub](https://github.com/grace-anderson/e-commerce-back-end) for the e-commerce back end.
 
 ## Technologies
+* [Insomnia](https://insomnia.rest/)
 * JavaScript
 * [node](https://nodejs.org/en/)
-* [npm inquirer package](https://www.npmjs.com/package/inquirer?activeTab=readme)
-* [MySQL](https://www.mysql.com/)
-* [npm MySQL2 package](https://www.npmjs.com/package/mysql2)
-* [npm figlet package](https://www.npmjs.com/package/figlet)
+* [npm dotenv](https://www.npmjs.com/package/dotenv)
+* [npm mysql2](https://www.npmjs.com/package/mysql2)
+* [Sequelize](https://sequelize.org/)
+* [Visual Studio](https://visualstudio.microsoft.com/downloads/) 
 
 ## Installation and Usage
   1. Get the code
@@ -36,30 +39,15 @@ Go to [GitHub](https://github.com/grace-anderson/employee-tracker) for the Emplo
       * More information
         * [How to fork a repo](https://docs.github.com/en/get-started/quickstart/fork-a-repo)
         * [GitHub getting started](https://docs.github.com/)
-  2. Ready the app
-      * Use a command line tool (e.g. Visual Studio) to change directory(cd) into the application's folder
-      * Install the necessary packages: `npm install`
-      * More information
-        * [Getting started with Visual Studio Code](https://code.visualstudio.com/docs/introvideos/basics)
-        * [How to install NodeJS](https://coding-boot-camp.github.io/full-stack/nodejs/how-to-install-nodejs)
-  3. Set up the database 
-     * [Install and create a user account for MySQL](https://coding-boot-camp.github.io/full-stack/nodejs/how-to-install-nodejs)
-     * Update the user credentials in the server.js file to your MySQL credentials
-       * **Note that configuration is unsecure. Before using the Employee Tracker, consult with your ICT provider to update the Employee Tracker so that it complies with your organisation's security policies.**
-     * In your command line tool type `mysql -u root -p` . 
-     * Then, to create the database schema, type `source schema.sql`
-     * If you wish, you can populate or seed the database with test data `source seed.sql`
-     * Then tell the Employee Tracker to use the employees_db database `use employees_db`
-  4. Then start the Employee Tracker by typing into the command line `node server.js`
-  5. Watch this [video](https://drive.google.com/file/d/1bkk5zaaNlpFWNYM8t2c8oHwZZ_kqIJN3/view?usp=sharing) for detailed instructions. 
+  2. Watch this **TO DO VIDEO** [video](https://drive.google.com/file/d/1bkk5zaaNlpFWNYM8t2c8oHwZZ_kqIJN3/view?usp=sharing) for detailed installation and usage instructions. 
 
 ## License
-License covering this application: [MIT](https://opensource.org/licenses/MIT)
+License covering this application: [ISC](https://opensource.org/licenses/ISC)
 
 ## Contribution Guidelines
 * Contributions are welcome.
-* You may contribute to the **Employee Tracker** project following the Contribution Guidelines below.
-* The code is located in the [Employee Tracker repository](https://github.com/grace-anderson/employee-tracker) 
+* You may contribute to the **E-Commerce Back End** project following the Contribution Guidelines below.
+* The code is located in the [E-Commerce Back End repository](https://github.com/grace-anderson/e-commerce-back-end) 
 * To contribute, open a new issue describing your proposed enhancement or fix.
   * Before contributing, browse through the open issues to see if your issue already exists or if there is an issue you might be able to solve. 
   * If you're a newbie dev, start contributing by looking for issues labelled "good first issue"
@@ -73,30 +61,24 @@ License covering this application: [MIT](https://opensource.org/licenses/MIT)
 Test using the following User Story and Acceptance Criteria to validate the features of the Employee Tracker.
 
 #### User Story
-AS A business owner
-I WANT to be able to view and manage the departments, roles, and employees in my company
-SO THAT I can organize and plan my business
+AS A manager at an internet retail company
+I WANT a back end for my e-commerce website that uses the latest technologies
+SO THAT my company can compete with other e-commerce companies
 
 #### Acceptance Criteria
-GIVEN a command-line application that accepts user input
-* WHEN I start the application
-THEN I am presented with the following options: view all departments, view all roles, view all employees, add a department, add a role, add an employee, and update an employee role
-* WHEN I choose to view all departments
-THEN I am presented with a formatted table showing department names and department ids
-* WHEN I choose to view all roles
-THEN I am presented with the job title, role id, the department that role belongs to, and the salary for that role
-* WHEN I choose to view all employees
-THEN I am presented with a formatted table showing employee data, including employee ids, first names, last names, job titles, departments, salaries, and managers that the employees report to
-* WHEN I choose to add a department
-THEN I am prompted to enter the name of the department and that department is added to the database
-* WHEN I choose to add a role
-THEN I am prompted to enter the name, salary, and department for the role and that role is added to the database
-* WHEN I choose to add an employee
-THEN I am prompted to enter the employee’s first name, last name, role, and manager, and that employee is added to the database
-* WHEN I choose to update an employee role
-THEN I am prompted to select an employee to update and their new role and this information is updated in the database 
+GIVEN a functional Express.js API
+WHEN I add my database name, MySQL username, and MySQL password to an environment variable file
+THEN I am able to connect to a database using Sequelize
+WHEN I enter schema and seed commands
+THEN a development database is created and is seeded with test data
+WHEN I enter the command to invoke the application
+THEN my server is started and the Sequelize models are synced to the MySQL database
+WHEN I open API GET routes in Insomnia for categories, products, or tags
+THEN the data for each of these routes is displayed in a formatted JSON
+WHEN I test API POST, PUT, and DELETE routes in Insomnia
+THEN I am able to successfully create, update, and delete data in my database 
 
 ## Questions 
-If you have questions about the **Employee Tracker**, feel free to [email](mailto:helen.g.anderson@me.com) the author, Helen Anderson.
+If you have questions about the **E-Commerce Back End**, feel free to [email](mailto:helen.g.anderson@me.com) the author, Helen Anderson.
 
 See more of Helen Anderson's work on [GitHub](https://github.com/grace-anderson)
