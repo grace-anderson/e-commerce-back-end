@@ -27,7 +27,8 @@ Go to [GitHub](https://github.com/grace-anderson/e-commerce-back-end) for the e-
 * [Express](http://expressjs.com/)
 * [Bash](https://gitforwindows.org/)
 * [Insomnia](https://insomnia.rest/)
-* JavaScript
+* [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+* [JSON](https://www.json.org/json-en.html)
 * [node](https://nodejs.org/en/)
 * [npm dotenv](https://www.npmjs.com/package/dotenv)
 * [npm mysql2](https://www.npmjs.com/package/mysql2)
