@@ -24,6 +24,8 @@ Because this application is not deployed, **TO DO Link ** a walkthrough video is
 Go to [GitHub](https://github.com/grace-anderson/e-commerce-back-end) for the e-commerce back end.
 
 ## Technologies
+* [Express](http://expressjs.com/)
+* [Bash](https://gitforwindows.org/)
 * [Insomnia](https://insomnia.rest/)
 * JavaScript
 * [node](https://nodejs.org/en/)
