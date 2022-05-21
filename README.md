@@ -1,7 +1,7 @@
 # Project: E-Commerce Back End
 
 
-[![](https://img.shields.io/badge/License-MIT-brightgreen)](https://opensource.org/licenses/ISC)
+[![](https://img.shields.io/badge/License-ISC-brightgreen)](https://opensource.org/licenses/ISC)
 
 
 ## Table of Contents
