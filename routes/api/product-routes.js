@@ -93,22 +93,36 @@ router.put("/:id", (req, res) => {
   // 	"tagIds": []
   // }
 
-  Product.update(req.body, {
-    where: {
-      id: req.params.id,
-    },
+  Product.findByPk(req.params.id)
+  
+  .then((product) => {
+    console.log({product});
+    if(!product){
+      throw new Error('Product not found')
+    }else{
+      // perform update
+      product.setAttributes({
+        // TODO: be explicit
+        ...req.body
+      })
+  
+      return product.save();
+    }
   })
-
     // if (!category) {
     //   res.status(404).send({ message: "Category not found" });
     //   return;
     // }
 
     .then((product) => {
+
       // find all associated tags from ProductTag
       return ProductTag.findAll({ where: { product_id: req.params.id } });
     })
     .then((productTags) => {
+      if(!req.body.tagIds){
+        return productTags;
+      }
       // get list of current tag_ids
       const productTagIds = productTags.map(({ tag_id }) => tag_id);
       // create filtered list of new tag_ids
@@ -134,7 +148,9 @@ router.put("/:id", (req, res) => {
     .then((updatedProductTags) => res.json(updatedProductTags))
     .catch((err) => {
       console.log(err);
-      res.status(400).json(err);
+      res.status(400).json({
+        error: String(err),
+      });
     });
 });
 
