@@ -19,7 +19,7 @@ This project is an e-commerce back end built by configuring a working Express.js
 
 Internet retail, also known as e-commerce, is the largest sector of the electronics industry, generating an estimated $29 trillion in 2019. E-commerce platforms like Shopify and WooCommerce provide a suite of services to businesses of all sizes. Due to their prevalence, understanding the fundamental architecture of these platforms will benefit you as a small business owner, a start up team member, or a junior developer.
 
-Because this application is not deployed, [a walkthrough video](https://drive.google.com/file/d/10jqRn1olrjNGFH-welKczM280Zf1oTGZ/view?usp=sharing) is provided to demonstrate the e-commerce back end's use and functionality. 
+Because this application is not deployed, [a walkthrough video](https://drive.google.com/file/d/1uElJcKe_BD67qOa6dpZX5QPM1EucG4sa/view?usp=sharing) is provided to demonstrate the e-commerce back end's use and functionality. 
 
 Go to [GitHub](https://github.com/grace-anderson/e-commerce-back-end) for the e-commerce back end.
 
@@ -42,7 +42,7 @@ Go to [GitHub](https://github.com/grace-anderson/e-commerce-back-end) for the e-
       * More information
         * [How to fork a repo](https://docs.github.com/en/get-started/quickstart/fork-a-repo)
         * [GitHub getting started](https://docs.github.com/)
-  2. Watch this [video](https://drive.google.com/file/d/10jqRn1olrjNGFH-welKczM280Zf1oTGZ/view?usp=sharing) for installation and usage instructions. 
+  2. Watch this [video](https://drive.google.com/file/d/1uElJcKe_BD67qOa6dpZX5QPM1EucG4sa/view?usp=sharing) for installation and usage instructions. 
 
 ## License
 License covering this application: [ISC](https://opensource.org/licenses/ISC)
